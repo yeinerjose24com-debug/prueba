@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    line-height: 1.6;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-water-600 hover:bg-water-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-medium focus:outline-none focus:ring-4 focus:ring-water-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-white hover:bg-water-50 text-water-700 font-semibold py-4 px-8 rounded-xl border-2 border-water-200 hover:border-water-300 transition-all duration-300 transform hover:scale-105 hover:shadow-soft focus:outline-none focus:ring-4 focus:ring-water-200;
+  }
+  
+  .card {
+    @apply bg-white rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300 border border-gray-100;
+  }
+  
+  .card-hover {
+    @apply hover:transform hover:-translate-y-2 hover:shadow-strong;
+  }
+  
+  .section-padding {
+    @apply py-20 px-4;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-water-600 to-ocean-600 bg-clip-text text-transparent;
+  }
+  
+  .gradient-bg {
+    @apply bg-gradient-to-br from-water-50 via-white to-ocean-50;
+  }
+  
+  .fade-in-up {
+    @apply animate-fade-in-up;
+  }
+  
+  .stagger-1 {
+    animation-delay: 0.1s;
+  }
+  
+  .stagger-2 {
+    animation-delay: 0.2s;
+  }
+  
+  .stagger-3 {
+    animation-delay: 0.3s;
+  }
+  
+  /* Estilos para el mapa */
+  .leaflet-container {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  .custom-marker {
+    background: transparent !important;
+    border: none !important;
+  }
+  
+  .leaflet-popup-content-wrapper {
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .leaflet-popup-tip {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .leaflet-tooltip {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+  
+  .leaflet-tooltip-top:before {
+    border-top-color: rgba(0, 0, 0, 0.8);
+  }
+}
