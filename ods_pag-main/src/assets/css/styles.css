@@ -1,0 +1,449 @@
+/* Estilos base y normalización */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #1e40af;
+    --secondary: #1e3a8a;
+    --accent: #3b82f6;
+    --background: #ffffff;
+    --text: #1f2937;
+    --text-light: #6b7280;
+    --gray: #f8fafc;
+    --gray-light: #f1f5f9;
+    --border-light: #e5e7eb;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --success: #10b981;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --quote-bg: #1e3a8a;
+    --quote-text: #ffffff;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Primera Sección: Diseño Profesional como la Imagen */
+.intro-section {
+    padding: 80px 0;
+    background: var(--background);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.intro-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+/* Columna Izquierda: Imagen con Cita */
+.image-content {
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+.main-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+.quote-box {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background: var(--quote-bg);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-lg);
+}
+
+.quote-mark {
+    font-size: 3rem;
+    color: var(--quote-text);
+    font-weight: 700;
+    line-height: 1;
+    opacity: 0.8;
+}
+
+.quote-text {
+    color: var(--quote-text);
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+/* Columna Derecha: Texto Explicativo */
+.text-content {
+    padding: 20px 0;
+}
+
+.main-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+.main-description {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.cta-button {
+    background: var(--accent);
+    color: white;
+    border: 2px solid var(--accent);
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    background: var(--secondary);
+    border-color: var(--secondary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Segunda Sección: Escasez y Contaminación del Agua */
+.water-issues-section {
+    padding: 100px 0;
+    background: var(--gray-light);
+}
+
+.water-issues-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.left-column, .right-column {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    border-left: 4px solid var(--primary);
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--secondary);
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+.issue-text {
+    font-size: 1rem;
+    color: var(--text);
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.issue-text strong {
+    color: var(--secondary);
+    font-weight: 600;
+}
+
+/* Nueva Sección: Metas del ODS 6 */
+.goals-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.goals-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.goals-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--secondary);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.goals-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.goals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.goal-card {
+    background: white;
+    padding: 0;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    border-left: 5px solid var(--primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.goal-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.goal-card:hover::before {
+    transform: scaleX(1);
+}
+
+.goal-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.goal-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+
+.goal-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.goal-card:hover .goal-img {
+    transform: scale(1.05);
+}
+
+.goal-content {
+    padding: 30px;
+}
+
+.goal-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--secondary);
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.goal-description {
+    font-size: 1rem;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* Tercera Sección: Hero Section con Dashboard */
+.hero-section {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    padding: 100px 0;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-light);
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--gray-light);
+}
+
+.dashboard-header h3 {
+    font-size: 1.3rem;
+    color: var(--secondary);
+    font-weight: 600;
+}
+
+.update-indicator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background: var(--success);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.interactive-content {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--text-light);
+    font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .intro-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    .main-description {
+        font-size: 1rem;
+    }
+    
+    .water-issues-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .left-column, .right-column {
+        padding: 30px;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .goals-title {
+        font-size: 2.2rem;
+    }
+    
+    .goals-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .goal-card {
+        padding: 0;
+    }
+    
+    .goal-content {
+        padding: 25px;
+    }
+    
+    .goal-image {
+        height: 200px;
+    }
+    
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .quote-box {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        margin-top: 20px;
+    }
+}
